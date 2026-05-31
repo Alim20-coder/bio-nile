@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products – Bio Nile Herbs | Premium Egyptian Herbs & Botanicals</title>
+  <meta name="description" content="Browse Bio Nile Herbs' full catalog of 24 premium Egyptian herbs — chamomile, hibiscus, moringa, peppermint and more. B2B herbal raw material supplier." />
+  <meta name="keywords" content="buy herbs egypt, dried herbs wholesale egypt, moringa leaves egypt, chamomile flowers egypt, hibiscus petals egypt, herbal supplier egypt, organic herbs supplier, اعشاب مجففة جملة مصر" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --green-dark: #1a4a2e;
+      --green-mid: #2d7a4f;
+      --green-light: #4caf77;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --cream: #faf7f0;
+      --text-dark: #1c2b1e;
+      --text-mid: #3d5c45;
+      --white: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Cormorant Garamond', serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; }
+    body.ar { font-family: 'Tajawal', sans-serif; direction: rtl; }
+
+    /* NAVBAR */
+    #navbar {
+      position: fixed; top: 0; width: 100%; z-index: 9999;
+      background: rgba(26,74,46,0.85);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      padding: 14px 0;
+    }
+    #navbar .navbar-brand img { height: 56px; }
+    #navbar .nav-link { color: #fff !important; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.08em; padding: 6px 14px !important; transition: color 0.3s; }
+    body.ar #navbar .nav-link { font-family: 'Tajawal', sans-serif; }
+    #navbar .nav-link:hover { color: var(--gold-light) !important; }
+    .btn-lang { border: 2px solid var(--gold); color: var(--gold); background: transparent; border-radius: 20px; padding: 5px 18px; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.3s; letter-spacing: 0.05em; }
+    .btn-lang:hover { background: var(--gold); color: #fff; }
+    .btn-quote { background: var(--gold); color: #fff; border: none; border-radius: 25px; padding: 8px 22px; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+    .btn-quote:hover { background: var(--gold-light); color: #fff; transform: translateY(-2px); }
+    .navbar-toggler { border-color: var(--gold) !important; }
+    .navbar-toggler-icon { filter: invert(1); }
+
+    /* HERO */
+    #hero {
+      position: relative; height: 90vh; min-height: 480px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      margin-top: 0; padding-top: 0;
+    }
+    #hero-bg {
+      position: absolute; inset: 0;
+      background: url('Css/pro.jpg') center/cover no-repeat;
+      animation: hZoom 14s ease-in-out infinite alternate;
+    }
+    @keyframes hZoom { from { transform: scale(1.03); } to { transform: scale(1.12); } }
+    #hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(13,43,25,0.5) 0%, rgba(13,43,25,0.25) 50%, rgba(13,43,25,0.75) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; text-align: center; color: #fff; padding: 0 20px; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.2); border: 1px solid rgba(201,168,76,0.5);
+      border-radius: 20px; padding: 5px 20px;
+      font-size: 0.78rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold-light); margin-bottom: 16px;
+      animation: fadeUp 0.7s ease forwards 0.2s; opacity: 0;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 900; line-height: 1.1;
+      animation: fadeUp 0.7s ease forwards 0.6s; opacity: 0;
+    }
+    body.ar .hero-title { font-family: 'Tajawal', sans-serif; font-weight: 700; }
+    .hero-sub {
+      font-size: clamp(0.95rem, 2vw, 1.2rem); color: rgba(255,255,255,0.8);
+      max-width: 580px; margin: 14px auto 0; line-height: 1.7; font-weight: 300;
+      animation: fadeUp 0.7s ease forwards 0.9s; opacity: 0;
+    }
+    body.ar .hero-sub { font-family: 'Tajawal', sans-serif; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* DESCRIPTION SECTION */
+    #desc-section { background: var(--white); padding: 70px 0; }
+    .desc-card {
+      background: var(--cream); border-radius: 24px;
+      padding: 50px; box-shadow: 0 12px 50px rgba(0,0,0,0.06);
+      border: 1px solid rgba(26,74,46,0.08);
+    }
+    .desc-img-card {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+      border-radius: 24px; overflow: hidden;
+      min-height: 340px; position: relative;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .desc-img-card img {
+      width: 100%; height: 100%; object-fit: cover; opacity: 0.7;
+      position: absolute; inset: 0;
+    }
+    .desc-img-label {
+      position: relative; z-index: 1;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem; font-weight: 900; color: #fff;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    }
+    body.ar .desc-img-label { font-family: 'Tajawal', sans-serif; }
+    .desc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700;
+      color: var(--text-dark); margin-bottom: 18px; line-height: 1.3;
+    }
+    body.ar .desc-title { font-family: 'Tajawal', sans-serif; }
+    .desc-text { font-size: 1.05rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 14px; }
+    body.ar .desc-text { font-family: 'Tajawal', sans-serif; }
+    .desc-badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    body.ar .desc-badge-row { justify-content: flex-end; }
+    .desc-badge {
+      background: rgba(26,74,46,0.1); color: var(--green-dark);
+      border: 1px solid rgba(26,74,46,0.2); border-radius: 20px;
+      padding: 6px 16px; font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    body.ar .desc-badge { font-family: 'Tajawal', sans-serif; letter-spacing: 0; }
+
+    /* FILTER BAR */
+    #filter-bar { background: var(--white); padding: 20px 0; position: sticky; top: 84px; z-index: 100; border-bottom: 1px solid rgba(0,0,0,0.07); }
+    .filter-inner { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; }
+    body.ar .filter-inner { justify-content: center; }
+    .filter-btn {
+      background: transparent; border: 2px solid rgba(26,74,46,0.2);
+      border-radius: 20px; padding: 7px 16px; font-size: 0.85rem; font-weight: 700;
+      color: var(--text-mid); cursor: pointer; transition: all 0.25s;
+      letter-spacing: 0.06em; text-align: center;
+    }
+    body.ar .filter-btn { font-family: 'Tajawal', sans-serif; letter-spacing: 0; }
+    .filter-btn:hover, .filter-btn.active { background: var(--green-dark); border-color: var(--green-dark); color: #fff; }
+    .search-box {
+      margin-inline-start: auto;
+      border: 2px solid rgba(26,74,46,0.2); border-radius: 25px;
+      padding: 7px 18px 7px 38px; font-size: 0.9rem; outline: none;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232d7a4f' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.242 1.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z'/%3E%3C/svg%3E") no-repeat 12px center;
+      background-color: var(--cream);
+      transition: border-color 0.3s;
+    }
+    body.ar .search-box { padding: 7px 38px 7px 18px; background-position: calc(100% - 12px) center; margin-inline-start: 0; margin-inline-end: auto; }
+    .search-box:focus { border-color: var(--green-mid); }
+
+    /* HERBS GRID */
+    #herbs-section { padding: 60px 0 80px; }
+    .herb-card {
+      background: var(--white); border-radius: 20px;
+      overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(26,74,46,0.08);
+      height: 100%;
+      display: flex; flex-direction: column;
+    }
+    .herb-card:hover { transform: translateY(-12px); box-shadow: 0 24px 60px rgba(26,74,46,0.2); border-color: var(--green-light); }
+    .herb-card-img-wrap {
+      position: relative; background: var(--cream);
+      padding: 28px; display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .herb-card-img-wrap img {
+      width: 160px; height: 160px; object-fit: cover; object-position: center bottom; border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      transition: transform 0.4s ease;
+      border: 4px solid rgba(201,168,76,0.2);
+    }
+    .herb-card:hover .herb-card-img-wrap img { transform: scale(1.08) rotate(3deg); }
+    .herb-card-badge {
+      position: absolute; top: 14px; right: 14px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #fff; border-radius: 12px; padding: 3px 10px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+    }
+    body.ar .herb-card-badge { right: auto; left: 14px; letter-spacing: 0; font-family: 'Tajawal', sans-serif; }
+    .herb-card-body { padding: 20px 22px 24px; flex: 1; display: flex; flex-direction: column; }
+    .herb-card-name {
+      font-family: 'Playfair Display', serif; font-size: 1.15rem;
+      font-weight: 700; color: var(--text-dark); margin-bottom: 8px;
+    }
+    body.ar .herb-card-name { font-family: 'Tajawal', sans-serif; }
+    .herb-card-desc { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; flex: 1; margin-bottom: 16px; }
+    body.ar .herb-card-desc { font-family: 'Tajawal', sans-serif; }
+    .herb-card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+    .herb-tag {
+      background: rgba(26,74,46,0.08); color: var(--green-mid);
+      border-radius: 10px; padding: 2px 10px; font-size: 0.75rem; font-weight: 600;
+    }
+    body.ar .herb-tag { font-family: 'Tajawal', sans-serif; }
+    .btn-readmore {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+      color: #fff; border: none; border-radius: 25px;
+      padding: 10px 26px; font-size: 0.88rem; font-weight: 700;
+      cursor: pointer; transition: all 0.3s; width: 100%;
+      letter-spacing: 0.06em;
+    }
+    body.ar .btn-readmore { font-family: 'Tajawal', sans-serif; letter-spacing: 0; }
+    .btn-readmore:hover { background: linear-gradient(135deg, var(--green-mid), var(--green-light)); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,74,46,0.3); }
+
+    /* NO RESULTS */
+    #noResults { display: none; text-align: center; padding: 60px 20px; color: var(--text-mid); }
+    body.ar #noResults { font-family: 'Tajawal', sans-serif; }
+
+    /* ── HEALTH IMPORTANCE ── */
+    #health-importance { background: var(--cream); padding: 80px 0; }
+    .health-card-light { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid rgba(26,74,46,0.08); height: 100%; }
+    .health-card-dark { background: linear-gradient(135deg, var(--green-dark), var(--green-mid)); padding: 40px; border-radius: 20px; color: #fff; box-shadow: 0 10px 40px rgba(26,74,46,0.2); height: 100%; }
+    .health-title { font-family: 'Playfair Display', serif; color: var(--green-dark); margin-bottom: 20px; font-weight: 700; font-size: 1.8rem; }
+    body.ar .health-title { font-family: 'Tajawal', sans-serif; }
+    .health-title-dark { font-family: 'Playfair Display', serif; margin-bottom: 24px; font-weight: 700; font-size: 1.8rem; color: #fff; }
+    body.ar .health-title-dark { font-family: 'Tajawal', sans-serif; }
+    .health-text { font-size: 1.05rem; line-height: 1.85; color: var(--text-mid); margin-bottom: 20px; }
+    body.ar .health-text { font-family: 'Tajawal', sans-serif; }
+    .health-list { list-style: none; padding: 0; }
+    .health-list-item { margin-bottom: 20px; display: flex; align-items: flex-start; gap: 14px; }
+    body.ar .health-list-item { flex-direction: row-reverse; }
+    .health-list-icon { color: var(--gold); font-size: 1.5rem; margin-top: 4px; min-width: 24px; text-align: center; }
+    .health-list-title { display: block; font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.05em; font-family: 'Playfair Display', serif; color: #fff; }
+    body.ar .health-list-title { font-family: 'Tajawal', sans-serif; letter-spacing: 0; text-align: right; }
+    .health-list-desc { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.7; display: block; }
+    body.ar .health-list-desc { font-family: 'Tajawal', sans-serif; text-align: right; }
+
+    /* ── FLOATING BUTTONS ── */
+    .floating-btns { position: fixed; bottom: 30px; left: 30px; display: flex; flex-direction: column; gap: 12px; z-index: 1000; }
+    .float-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.8rem; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: all 0.3s ease; }
+    .float-btn.whatsapp { background: #25D366; }
+    .float-btn.call { background: var(--gold); }
+    .float-btn:hover { transform: translateY(-4px) scale(1.1); color: #fff; }
+
+    /* FOOTER */
+    #footer { background: #0d2010; color: rgba(255,255,255,0.7); padding: 60px 0 30px; }
+    .footer-logo img { max-width: 130px; filter: brightness(1.2); }
+    .footer-desc { font-size: 0.9rem; line-height: 1.8; margin-top: 14px; color: rgba(255,255,255,0.55); }
+    body.ar .footer-desc { font-family: 'Tajawal', sans-serif; }
+    .footer-heading { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid rgba(201,168,76,0.4); }
+    body.ar .footer-heading { font-family: 'Tajawal', sans-serif; }
+    .footer-links { list-style: none; padding: 0; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+    body.ar .footer-links a { font-family: 'Tajawal', sans-serif; }
+    .footer-links a:hover { color: var(--gold-light); }
+    .social-icons { display: flex; gap: 12px; flex-wrap: wrap; }
+    body.ar .social-icons { justify-content: flex-end; }
+    .social-icon { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: all 0.3s; text-decoration: none; }
+    .social-icon.facebook { background: #1877f2; color: #fff; }
+    .social-icon.whatsapp { background: #25d366; color: #fff; }
+    .social-icon.instagram { background: linear-gradient(45deg, #f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
+    .social-icon.linkedin { background: #0a66c2; color: #fff; }
+    .social-icon:hover { transform: translateY(-4px) scale(1.1); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 20px; text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.35); }
+    body.ar .footer-bottom { font-family: 'Tajawal', sans-serif; }
+
+    /* SCROLL REVEAL */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* BACK TOP */
+    #backTop { position: fixed; bottom: 30px; right: 30px; width: 46px; height: 46px; background: var(--gold); color: #fff; border: none; border-radius: 50%; font-size: 1.1rem; cursor: pointer; z-index: 999; opacity: 0; pointer-events: none; transition: all 0.3s; box-shadow: 0 6px 20px rgba(201,168,76,0.4); }
+    #backTop.show { opacity: 1; pointer-events: all; }
+    #backTop:hover { transform: translateY(-4px); }
+
+    @media (max-width: 768px) {
+      .desc-card { padding: 30px 20px; }
+      .filter-inner { gap: 8px; }
+      .search-box { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="Css/logo.jpeg" alt="Bio Nile Herbs"
+           onerror="this.onerror=null;this.src='https://via.placeholder.com/140x56/1a4a2e/gold?text=Bio+Nile+Herbs'"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about" data-en="About" data-ar="من نحن">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="products.html" data-en="Products" data-ar="المنتجات">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#article" data-en="Articles" data-ar="المقالات">Articles</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#location" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+        <button class="btn-lang" id="langToggle" onclick="toggleLang()">عربي</button>
+        <a href="index.html#location" class="btn-quote" data-en="Get a Quote" data-ar="احصل على عرض سعر">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="padding-top:84px;">
+  <div id="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge" data-en="24 Premium Varieties" data-ar="24 صنفاً فاخراً">24 Premium Varieties</div>
+    <h1 class="hero-title" data-en="Our Herb Catalog" data-ar="كتالوج الأعشاب">Our Herb Catalog</h1>
+    <p class="hero-sub" data-en="Explore our comprehensive catalog of the finest Egyptian herbs, potent botanicals, and rich spices. Every leaf is meticulously grown, carefully dried, and rigorously tested." data-ar="استكشف كتالوجنا الشامل لأجود الأعشاب والنباتات والتوابل المصرية الفعالة. تتم زراعة كل ورقة بعناية، وتجفيفها بدقة، واختبارها بصرامة.">Explore our comprehensive catalog of the finest Egyptian herbs, potent botanicals, and rich spices. Every leaf is meticulously grown, carefully dried, and rigorously tested.</p>
+  </div>
+</section>
+
+<!-- DESCRIPTION SECTION -->
+<section id="desc-section">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-5 reveal">
+        <div class="desc-img-card">
+          <img src="Css/logo.jpeg" alt="Herbs" />
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <div class="desc-card">
+          <h2 class="desc-title" data-en="Tailor Your Products with the Finest Herbs Available in Egypt" data-ar="خصِّص منتجاتك بأجود الأعشاب المتاحة في مصر">Tailor Your Products with the Finest Herbs Available in Egypt</h2>
+          <p class="desc-text" data-en="Whether you're a pharmaceutical company requiring active botanical compounds, a cosmetics brand formulating natural skincare, or a food & beverage manufacturer seeking authentic flavors — you have found the hidden treasure of the Nile Delta!" data-ar="سواء كنت شركة أدوية تبحث عن مركبات نباتية فعالة، أو علامة تجارية لمستحضرات التجميل تصنع منتجات عناية طبيعية، أو مُصنّع أغذية ومشروبات يبحث عن نكهات أصلية — فقد وجدت كنز دلتا النيل المخفي!">Whether you're a pharmaceutical company requiring active botanical compounds, a cosmetics brand formulating natural skincare, or a food & beverage manufacturer seeking authentic flavors — you have found the hidden treasure of the Nile Delta!</p>
+          <p class="desc-text" data-en="With a diverse catalog that elevates your ability to scale, we empower you to fully customize your raw materials. From offering strictly certified organic products to preparing exact cut-sizes (whole, TBC, fine powder), we ensure your ingredients are production-ready upon arrival. This is paired with highly reliable logistics and flexible payment terms." data-ar="من خلال كتالوج متنوع يعزز قدرتك على التوسع، نُمكّنك من تخصيص موادك الخام بالكامل. بدءاً من تقديم منتجات عضوية معتمدة بدقة إلى تجهيز أحجام تقطيع محددة (كاملة، مجروشة للشاي، مسحوق ناعم)، نضمن وصول مكوناتك جاهزة للإنتاج. كل هذا مقترن بلوجستيات عالية الموثوقية وشروط دفع مرنة.">With a diverse catalog that elevates your ability to scale, we empower you to fully customize your raw materials. From offering strictly certified organic products to preparing exact cut-sizes (whole, TBC, fine powder), we ensure your ingredients are production-ready upon arrival. This is paired with highly reliable logistics and flexible payment terms.</p>
+          <p class="desc-text" data-en="Simply put: if you demand unwavering efficiency, supreme quality, and transparent partnership — Bio Nile Herbs is your ultimate supply partner." data-ar="ببساطة: إذا كنت تبحث عن كفاءة لا تتزعزع، وجودة فائقة، وشراكة شفافة — فإن بيو نايل هيربس هي شريك التوريد المثالي لك.">Simply put: if you demand unwavering efficiency, supreme quality, and transparent partnership — Bio Nile Herbs is your ultimate supply partner.</p>
+          <div class="desc-badge-row">
+            <span class="desc-badge" data-en="✓ Conventional" data-ar="✓ تقليدي">✓ Conventional</span>
+            <span class="desc-badge" data-en="✓ Organic" data-ar="✓ عضوي">✓ Organic</span>
+            <span class="desc-badge" data-en="✓ Custom Cut-Sizes" data-ar="✓ قطع مخصصة">✓ Custom Cut-Sizes</span>
+            <span class="desc-badge" data-en="✓ B2B Ready" data-ar="✓ جاهز للبيع بالجملة">✓ B2B Ready</span>
+            <span class="desc-badge" data-en="✓ Global Shipping" data-ar="✓ شحن عالمي">✓ Global Shipping</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div id="filter-bar">
+  <div class="container">
+    <div class="filter-inner" id="filterBar">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- HERBS GRID -->
+<section id="herbs-section">
+  <div class="container">
+    <div class="row g-4" id="herbsGrid"></div>
+    <div id="noResults">
+      <i class="fa fa-search fa-2x mb-3" style="color:var(--gold)"></i>
+      <p id="noResultsText">No herbs found for your search.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION: HEALTH IMPORTANCE ══ -->
+<section id="health-importance">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-badge" data-en="Health & Wellness" data-ar="الصحة والعافية">Health & Wellness</span>
+      <h2 class="section-title" data-en="The Vital Role of Herbs in Human Health" data-ar="أهمية الأعشاب لصحة الإنسان">The Vital Role of Herbs in Human Health</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="row g-5 align-items-stretch">
+      <div class="col-lg-6 reveal">
+        <div class="health-card-light">
+          <h4 class="health-title" data-en="Nature's Ultimate Pharmacy" data-ar="صيدلية الطبيعة المتكاملة">Nature's Ultimate Pharmacy</h4>
+          <p class="health-text" data-en="For millennia, humanity has relied on the profound healing properties of botanical treasures. Modern science now validates what ancient traditions have long known: herbs are incredibly complex chemical factories. They are packed with essential oils, flavonoids, alkaloids, and powerful antioxidants that work synergistically to support the body's natural defense systems and promote holistic well-being." data-ar="منذ آلاف السنين، اعتمدت البشرية على الخصائص الشفائية العميقة للكنوز النباتية. واليوم، يؤكد العلم الحديث ما عرفته التقاليد القديمة منذ زمن طويل: الأعشاب هي مصانع كيميائية بالغة التعقيد. فهي غنية بالزيوت العطرية، والفلافونويد، والقلويدات، ومضادات الأكسدة القوية التي تعمل معاً بشكل تآزري لدعم أنظمة الدفاع الطبيعية للجسم وتعزيز الصحة الشاملة.">For millennia, humanity has relied on the profound healing properties of botanical treasures. Modern science now validates what ancient traditions have long known: herbs are incredibly complex chemical factories. They are packed with essential oils, flavonoids, alkaloids, and powerful antioxidants that work synergistically to support the body's natural defense systems and promote holistic well-being.</p>
+          <p class="health-text" data-en="Integrating high-quality, organically grown herbs into daily life—whether through dietary supplements, pharmaceutical formulations, soothing teas, or natural skincare products—provides a fundamental boost to the immune system. They actively combat oxidative stress, reduce harmful inflammation, improve digestion, and enhance cognitive function, offering a sustainable and natural pathway to longevity." data-ar="إن دمج الأعشاب عالية الجودة والمزروعة عضوياً في الحياة اليومية — سواء من خلال المكملات الغذائية، أو التركيبات الدوائية، أو أنواع الشاي المهدئة، أو منتجات العناية بالبشرة الطبيعية — يوفر دفعة قوية وأساسية لجهاز المناعة. فهي تكافح الإجهاد التأكسدي بشكل فعال، وتقلل من الالتهابات الضارة، وتحسن عملية الهضم، وتعزز الوظائف الإدراكية، مما يوفر مساراً طبيعياً ومستداماً لحياة صحية وعمر مديد.">Integrating high-quality, organically grown herbs into daily life—whether through dietary supplements, pharmaceutical formulations, soothing teas, or natural skincare products—provides a fundamental boost to the immune system. They actively combat oxidative stress, reduce harmful inflammation, improve digestion, and enhance cognitive function, offering a sustainable and natural pathway to longevity.</p>
+          <p class="health-text" data-en="Furthermore, natural botanical extracts are replacing synthetic chemicals in numerous industries, prioritizing safety and long-term vitality for consumers worldwide." data-ar="علاوة على ذلك، تحل المستخلصات النباتية الطبيعية محل المواد الكيميائية الاصطناعية في العديد من الصناعات، مع إعطاء الأولوية للسلامة والحيوية طويلة المدى للمستهلكين في جميع أنحاء العالم.">Furthermore, natural botanical extracts are replacing synthetic chemicals in numerous industries, prioritizing safety and long-term vitality for consumers worldwide.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal">
+        <div class="health-card-dark">
+          <h4 class="health-title-dark" data-en="Key Health Benefits" data-ar="الفوائد الصحية الرئيسية">Key Health Benefits</h4>
+          <ul class="health-list">
+            <li class="health-list-item">
+              <i class="fa fa-shield-virus health-list-icon"></i>
+              <div>
+                <strong class="health-list-title" data-en="Immune System Support" data-ar="دعم جهاز المناعة">Immune System Support</strong>
+                <span class="health-list-desc" data-en="Herbs like Echinacea, Moringa, and Thyme are rich in essential vitamins and potent antimicrobial compounds that actively strengthen the immune system and protect against pathogens." data-ar="الأعشاب مثل الإشنسا والمورينجا والزعتر غنية بالفيتامينات الأساسية والمركبات القوية المضادة للميكروبات التي تقوي جهاز المناعة بشكل فعال وتحمي من مسببات الأمراض.">Herbs like Echinacea, Moringa, and Thyme are rich in essential vitamins and potent antimicrobial compounds that actively strengthen the immune system and protect against pathogens.</span>
+              </div>
+            </li>
+            <li class="health-list-item">
+              <i class="fa fa-heartbeat health-list-icon"></i>
+              <div>
+                <strong class="health-list-title" data-en="Chronic Disease Prevention" data-ar="الوقاية من الأمراض المزمنة">Chronic Disease Prevention</strong>
+                <span class="health-list-desc" data-en="Botanicals such as Hibiscus and Rosemary contain highly concentrated antioxidants that neutralize free radicals, lowering blood pressure and significantly reducing the risk of chronic conditions." data-ar="تحتوي النباتات مثل الكركدية وإكليل الجبل على مضادات أكسدة عالية التركيز تعمل على تحييد الجذور الحرة وخفض ضغط الدم وتقليل خطر الإصابة بالأمراض المزمنة بشكل كبير.">Botanicals such as Hibiscus and Rosemary contain highly concentrated antioxidants that neutralize free radicals, lowering blood pressure and significantly reducing the risk of chronic conditions.</span>
+              </div>
+            </li>
+            <li class="health-list-item">
+              <i class="fa fa-leaf health-list-icon"></i>
+              <div>
+                <strong class="health-list-title" data-en="Mental Clarity & Relaxation" data-ar="الوضوح الذهني والاسترخاء">Mental Clarity & Relaxation</strong>
+                <span class="health-list-desc" data-en="Adaptogenic and calming herbs like Chamomile and Lemon Balm help the nervous system alleviate severe stress, reduce daily anxiety, and drastically improve sleep patterns." data-ar="تساعد الأعشاب المهدئة والمكيفة مثل البابونج وحشيشة الليمون الجهاز العصبي على تخفيف التوتر الشديد، وتقليل القلق اليومي، وتحسين أنماط النوم بشكل جذري.">Adaptogenic and calming herbs like Chamomile and Lemon Balm help the nervous system alleviate severe stress, reduce daily anxiety, and drastically improve sleep patterns.</span>
+              </div>
+            </li>
+            <li class="health-list-item">
+              <i class="fa fa-spa health-list-icon"></i>
+              <div>
+                <strong class="health-list-title" data-en="Cellular Regeneration & Beauty" data-ar="تجديد الخلايا والجمال">Cellular Regeneration & Beauty</strong>
+                <span class="health-list-desc" data-en="With profound anti-inflammatory and cellular regenerative properties, herbs like Calendula and Rose are absolutely indispensable for maintaining radiant, youthful skin and holistic beauty." data-ar="بفضل خصائصها العميقة المضادة للالتهابات والمجددة للخلايا، تعتبر الأعشاب مثل الكاليندولا والورد ضرورية للغاية للحفاظ على بشرة مشرقة وشابة والجمال الشامل.">With profound anti-inflammatory and cellular regenerative properties, herbs like Calendula and Rose are absolutely indispensable for maintaining radiant, youthful skin and holistic beauty.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION: ORDER FORM ══ -->
+<section id="order-form" style="background: var(--cream); padding: 80px 0;">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-badge" data-en="Order & Inquiries" data-ar="الطلبات والاستفسارات">Order & Inquiries</span>
+      <h2 class="section-title" data-en="Request a Quote" data-ar="اطلب عرض سعر">Request a Quote</h2>
+      <div class="gold-divider"></div>
+      <p style="color:var(--text-mid); max-width:600px; margin:20px auto 0;" data-en="Fill out the form below with your requirements, and we will get back to you instantly via WhatsApp." data-ar="قم بملء النموذج أدناه بمتطلباتك، وسنقوم بالرد عليك فوراً عبر واتساب.">Fill out the form below with your requirements, and we will get back to you instantly via WhatsApp.</p>
+    </div>
+    <div class="row justify-content-center reveal">
+      <div class="col-lg-8">
+        <form id="waOrderForm" class="p-4 p-md-5" style="background: var(--white); border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); border: 1px solid rgba(201,168,76,0.2);">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <label class="form-label" style="color:var(--green-dark);font-weight:600;" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+              <input type="text" id="waName" class="form-control" style="padding:12px 16px; border-radius:10px; border:1px solid #ddd;" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" style="color:var(--green-dark);font-weight:600;" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+              <input type="tel" id="waPhone" class="form-control" style="padding:12px 16px; border-radius:10px; border:1px solid #ddd;" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label" style="color:var(--green-dark);font-weight:600;" data-en="Company Name (Optional)" data-ar="اسم الشركة (اختياري)">Company Name (Optional)</label>
+              <input type="text" id="waCompany" class="form-control" style="padding:12px 16px; border-radius:10px; border:1px solid #ddd;">
+            </div>
+            <div class="col-12">
+              <label class="form-label" style="color:var(--green-dark);font-weight:600;" data-en="Product & Quantity Details" data-ar="تفاصيل المنتجات والكمية المطلوبة">Product & Quantity Details</label>
+              <textarea id="waMessage" class="form-control" rows="5" style="padding:12px 16px; border-radius:10px; border:1px solid #ddd;" required></textarea>
+            </div>
+            <div class="col-12 text-center mt-4">
+              <button type="submit" class="btn-hero-primary w-100" style="border-radius:10px; padding:14px; font-size:1.1rem; border:none; cursor:pointer;">
+                <i class="fab fa-whatsapp me-2"></i> <span data-en="Send via WhatsApp" data-ar="إرسال عبر واتساب">Send via WhatsApp</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-logo">
+          <img src="Css/logo.jpeg" alt="Bio Nile Herbs"
+               onerror="this.onerror=null;this.src='https://via.placeholder.com/130x52/0d2010/gold?text=BNH'"/>
+        </div>
+        <p class="footer-desc" data-en="Nature's Pure Gifts · Quality Herbs · Global Trust." data-ar="هبات الطبيعة الخالصة · جودة الأعشاب · ثقة عالمية.">Nature's Pure Gifts · Quality Herbs · Global Trust.</p>
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/share/17pNF21iwv/?mibextid=wwXIfr" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/201515874716" class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/bion.ile?igsh=MWl6NGN3eHpnYXAxNQ%3D%3D&utm_source=qr" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/bio-nile-herbs/" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <h5 class="footer-heading" data-en="Navigate" data-ar="التنقل">Navigate</h5>
+        <ul class="footer-links">
+          <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+          <li><a href="index.html#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
+          <li><a href="products.html" data-en="Products" data-ar="المنتجات">Products</a></li>
+          <li><a href="index.html#location" data-en="Contact" data-ar="تواصل">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <h5 class="footer-heading" data-en="Contact" data-ar="تواصل">Contact</h5>
+        <ul class="footer-links">
+          <li><i class="fa fa-phone me-2" style="color:var(--gold)"></i><a href="tel:01019016511" style="color:inherit">01019016511</a></li>
+          <li class="mt-2"><i class="fab fa-whatsapp me-2" style="color:var(--gold)"></i><a href="https://wa.me/201515874716" style="color:inherit" target="_blank">01515874716</a></li>
+          <li class="mt-2"><i class="fa fa-map-marker-alt me-2" style="color:var(--gold)"></i><span data-en="Fayoum Abshway Abu Jansho" data-ar="الفيوم ابشواي ابو جنشو مساكن المرور">Fayoum Abshway Abu Jansho</span></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h5 class="footer-heading" data-en="Industries We Serve" data-ar="الصناعات التي نخدمها">Industries We Serve</h5>
+        <ul class="footer-links">
+          <li><i class="fa fa-pills me-2" style="color:var(--gold)"></i><span data-en="Pharmaceutical" data-ar="الصناعات الدوائية">Pharmaceutical</span></li>
+          <li class="mt-1"><i class="fa fa-spa me-2" style="color:var(--gold)"></i><span data-en="Cosmetics" data-ar="مستحضرات التجميل">Cosmetics</span></li>
+          <li class="mt-1"><i class="fa fa-utensils me-2" style="color:var(--gold)"></i><span data-en="Food & Beverage" data-ar="الأغذية والمشروبات">Food & Beverage</span></li>
+          <li class="mt-1"><i class="fa fa-flask me-2" style="color:var(--gold)"></i><span data-en="Nutraceuticals" data-ar="المكملات الغذائية">Nutraceuticals</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-en="© 2026 Bio Nile Herbs. All rights reserved." data-ar="© 2026 بيو نايل هيربس. جميع الحقوق محفوظة.">© 2026 Bio Nile Herbs. All rights reserved.</p>
+      <p class="mt-2 mb-0" style="font-size: 0.9rem;">
+        <span data-en="Designed by" data-ar="تم التصميم بواسطة">Designed by</span> 
+        <a href="https://www.facebook.com/profile.php?id=100090592885243&locale=ar_AR" target="_blank" style="color:var(--gold-light);text-decoration:none;font-weight:bold;">GMTWEB</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-btns">
+  <a href="https://wa.me/201515874716" target="_blank" class="float-btn whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:01019016511" class="float-btn call" title="Call Us"><i class="fa fa-phone"></i></a>
+</div>
+
+<button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa fa-chevron-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// ── HERBS DATA ──
+const HERBS = [
+  { id:1,  imgFile:"/Css/1.jpg",  en:{ name:"Alfalfa",                 desc:"Rich in vitamins, minerals and proteins — a powerhouse ingredient for nutraceutical and feed supplements.",   tags:["Nutritive","Detox","Organic"] },
+                              ar:{ name:"البرسيم الحجازي",         desc:"غني بالفيتامينات والمعادن والبروتينات — مكوّن محوري للمكملات الغذائية والأعلاف.",                           tags:["مغذي","تطهير","عضوي"] } },
+  { id:2,  imgFile:"/Css/2.jpg",  en:{ name:"Basil",                   desc:"Fragrant Mediterranean herb with antimicrobial and anti-inflammatory properties, ideal for food and cosmetics.",  tags:["Aromatic","Anti-Inflammatory","Food"] },
+                              ar:{ name:"الريحان",                  desc:"عشب البحر المتوسط العطر بخصائص مضادة للميكروبات والالتهاب، مثالي للأغذية ومستحضرات التجميل.",              tags:["عطري","مضاد التهاب","غذاء"] } },
+  { id:3,  imgFile:"/Css/3.jpg",  en:{ name:"Calendula Flowers",       desc:"Golden petals with exceptional skin-healing properties, widely used in cosmetic and pharmaceutical formulations.", tags:["Skin Care","Anti-Fungal","Cosmetics"] },
+                              ar:{ name:"زهور الكاليندولا",         desc:"بتلات ذهبية بخصائص شافية استثنائية للبشرة، تستخدم على نطاق واسع في تركيبات التجميل والأدوية.",             tags:["العناية بالبشرة","مضاد فطريات","تجميل"] } },
+  { id:4,  imgFile:"/Css/4.jpg",  en:{ name:"Chamomile Flowers",       desc:"Egypt's most famous botanical — exceptional bisabolol content for anti-inflammatory and calming applications.",   tags:["Anti-Inflammatory","Relaxant","Tea"] },
+                              ar:{ name:"زهور البابونج",            desc:"النبات الأشهر في مصر — محتوى استثنائي من البيسابولول للتطبيقات المضادة للالتهاب والمهدئة.",               tags:["مضاد التهاب","مهدئ","شاي"] } },
+  { id:5,  imgFile:"/Css/5.jpg",  en:{ name:"Cilantro (Coriander Leaves)", desc:"Aromatic leaves with detoxifying properties, essential in food processing and pharmaceutical applications.",   tags:["Digestive","Detox","Spice"] },
+                              ar:{ name:"الكزبرة (الأوراق)",        desc:"أوراق عطرية بخصائص مطهّرة، أساسية في تصنيع الأغذية وتطبيقات الأدوية.",                                     tags:["هضمي","تطهير","توابل"] } },
+  { id:6,  imgFile:"/Css/6.jpg",  en:{ name:"Dill",                    desc:"Feathery herb with digestive and antispasmodic properties, popular in food industry and traditional medicine.",   tags:["Digestive","Antispasmodic","Food"] },
+                              ar:{ name:"الشبت",                   desc:"عشب رفيع بخصائص هضمية ومضادة للتشنج، شائع في صناعة الأغذية والطب التقليدي.",                               tags:["هضمي","مضاد تشنج","غذاء"] } },
+  { id:7,  imgFile:"/Css/7.jpg",  en:{ name:"Hibiscus",                desc:"Deep crimson petals loaded with anthocyanins and Vitamin C — Egypt's top herb for beverage industry.",   tags:["Antioxidant","Beverage","Cardiovascular"] },
+                              ar:{ name:"الكركدية",                 desc:"بتلات قرمزية عميقة محملة بالأنثوسيانين وفيتامين C — العشب الأول في مصر لصناعة المشروبات.",          tags:["مضاد أكسدة","مشروبات","قلبي وعائي"] } },
+  { id:8,  imgFile:"/Css/8.jpg",  en:{ name:"Molokhia",                desc:"Highly nutritious Egyptian staple rich in folate, iron and vitamins — growing demand in health food markets.",   tags:["Nutritive","Iron-Rich","Superfood"] },
+                              ar:{ name:"الملوخية",                 desc:"أساسية مصرية عالية الغذاء غنية بالفولات والحديد والفيتامينات — طلب متنامٍ في أسواق الأغذية الصحية.",       tags:["مغذي","غني بالحديد","سوبرفود"] } },
+  { id:9,  imgFile:"/Css/9.jpg",  en:{ name:"Leek",                    desc:"Rich in flavonoids and sulfur compounds with cardiovascular benefits, used in food and nutraceutical industries.",  tags:["Cardiovascular","Antioxidant","Food"] },
+                              ar:{ name:"الكراث",                   desc:"غني بالفلافونويد ومركبات الكبريت ذات الفوائد القلبية الوعائية، يستخدم في الأغذية والمكملات.",               tags:["قلبي وعائي","مضاد أكسدة","غذاء"] } },
+  { id:10, imgFile:"/Css/10.jpg", en:{ name:"Lemon Balm",              desc:"Calming herb with anxiolytic and antiviral properties, excellent for pharmaceutical and nutraceutical use.",       tags:["Calming","Antiviral","Sleep"] },
+                              ar:{ name:"حشيشة الليمون",            desc:"عشب مهدئ بخصائص مضادة للقلق والفيروسات، ممتاز للاستخدام الدوائي والمكملات الغذائية.",                       tags:["مهدئ","مضاد فيروسات","نوم"] } },
+  { id:11, imgFile:"/Css/11.jpg", en:{ name:"Lemon Verbena",           desc:"Intensely aromatic with digestive and antioxidant properties, prized in cosmetic and beverage formulations.",      tags:["Aromatic","Digestive","Beverage"] },
+                              ar:{ name:"حشيشة الليمون الفيربينا",  desc:"عطرية بشدة بخصائص هضمية ومضادة للأكسدة، تحظى بتقدير في تركيبات التجميل والمشروبات.",                        tags:["عطري","هضمي","مشروبات"] } },
+  { id:12, imgFile:"/Css/12.jpg", en:{ name:"Lemongrass",              desc:"Tropical aromatic with antimicrobial and anti-inflammatory properties, widely used in cosmetics and food.",         tags:["Antimicrobial","Aromatic","Cosmetics"] },
+                              ar:{ name:"حشيشة الليمون العشبية",   desc:"عطرية استوائية بخصائص مضادة للميكروبات والالتهاب، تستخدم على نطاق واسع في التجميل والأغذية.",               tags:["مضاد ميكروبات","عطري","تجميل"] } },
+  { id:13, imgFile:"/Css/13.jpg", en:{ name:"Licorice",                desc:"Root with powerful anti-inflammatory and anti-ulcer properties — a cornerstone of traditional and modern medicine.",tags:["Anti-Inflammatory","Digestive","Pharma"] },
+                              ar:{ name:"عرق السوس",               desc:"جذر بخصائص مضادة قوية للالتهاب وقرحة المعدة — ركيزة في الطب التقليدي والحديث.",                             tags:["مضاد التهاب","هضمي","دواء"] } },
+  { id:14, imgFile:"/Css/14.jpg", en:{ name:"Marjoram",                desc:"Sweet aromatic herb with antioxidant and antimicrobial properties, popular in food processing.",                   tags:["Aromatic","Antioxidant","Food"] },
+                              ar:{ name:"المردقوش",                 desc:"عشب حلو المذاق بخصائص مضادة للأكسدة والميكروبات، شائع في تصنيع الأغذية.",                                   tags:["عطري","مضاد أكسدة","غذاء"] } },
+  { id:15, imgFile:"/Css/15.jpg", en:{ name:"Mint Leaves – Peppermint",desc:"High menthol content providing cooling, analgesic and digestive benefits — a top ingredient across industries.",   tags:["Menthol","Cooling","Digestive"] },
+                              ar:{ name:"النعناع الفلفلي",          desc:"محتوى مرتفع من المنثول يوفر فوائد تبريد ومسكنة وهضمية — مكوّن رئيسي عبر الصناعات المختلفة.",               tags:["منثول","تبريد","هضمي"] } },
+  { id:16, imgFile:"/Css/16.jpg", en:{ name:"Mint Leaves – Spearmint", desc:"Milder mint variety with refreshing flavor and carminative properties, ideal for food, beverage and dental care.",  tags:["Digestive","Refreshing","Food"] },
+                              ar:{ name:"النعناع السبيرمينت",       desc:"صنف نعناع أخف بنكهة منعشة وخصائص طاردة للغازات، مثالي للأغذية والمشروبات والعناية بالأسنان.",              tags:["هضمي","منعش","غذاء"] } },
+  { id:17, imgFile:"/Css/17.jpg", en:{ name:"Moringa Leaves",          desc:"The 'Miracle Tree' — unmatched nutritional profile with all essential amino acids, vitamins and minerals.",        tags:["Superfood","Nutritive","Organic"] },
+                              ar:{ name:"أوراق المورينجا",           desc:"\"شجرة المعجزات\" — ملف غذائي لا مثيل له بجميع الأحماض الأمينية الأساسية والفيتامينات والمعادن.",          tags:["سوبرفود","مغذي","عضوي"] } },
+  { id:18, imgFile:"/Css/18.jpg", en:{ name:"Nettle Leaves",           desc:"Iron-rich herb with anti-inflammatory and antihistamine properties, essential for pharmaceutical applications.",     tags:["Iron-Rich","Anti-Inflammatory","Pharma"] },
+                              ar:{ name:"أوراق القراص",             desc:"عشب غني بالحديد بخصائص مضادة للالتهاب والهيستامين، أساسي للتطبيقات الدوائية.",                             tags:["غني بالحديد","مضاد التهاب","دواء"] } },
+  { id:19, imgFile:"/Css/19.jpg", en:{ name:"Oregano",                 desc:"Potent antimicrobial herb rich in carvacrol and thymol, in high demand for pharma and food preservation.",         tags:["Antimicrobial","Antioxidant","Food"] },
+                              ar:{ name:"الأوريغانو",               desc:"عشب مضاد قوي للميكروبات غني بالكارفاكرول والثيمول، مطلوب بشدة في الأدوية وحفظ الأغذية.",                   tags:["مضاد ميكروبات","مضاد أكسدة","غذاء"] } },
+  { id:20, imgFile:"/Css/20.jpg", en:{ name:"Rose",                    desc:"Exquisite dried petals with skin-brightening and antioxidant benefits — prized in luxury cosmetics and teas.",     tags:["Skin Care","Antioxidant","Cosmetics"] },
+                              ar:{ name:"الورد",                   desc:"بتلات مجففة فائقة بفوائد إضاءة البشرة ومضادة للأكسدة — ذات قيمة في مستحضرات التجميل الفاخرة والشاي.",     tags:["العناية بالبشرة","مضاد أكسدة","تجميل"] } },
+  { id:21, imgFile:"/Css/21.jpg", en:{ name:"Rosemary",                desc:"Rich in rosmarinic acid and carnosol — powerful antioxidants with applications in cosmetics, food and pharma.",   tags:["Antioxidant","Preservative","Aromatic"] },
+                              ar:{ name:"إكليل الجبل",             desc:"غني بحمض الروزمارينيك والكارنوسول — مضادات أكسدة قوية بتطبيقات في التجميل والأغذية والأدوية.",             tags:["مضاد أكسدة","حافظ","عطري"] } },
+  { id:22, imgFile:"/Css/22.jpg", en:{ name:"Sage",                    desc:"Revered herb with antimicrobial, estrogenic and cognitive-support properties — highly valued by pharma companies.", tags:["Antimicrobial","Cognitive","Pharma"] },
+                              ar:{ name:"المريمية",                 desc:"عشب مبجل بخصائص مضادة للميكروبات وداعمة للإستروجين والإدراك — ذو قيمة عالية لشركات الأدوية.",             tags:["مضاد ميكروبات","إدراكي","دواء"] } },
+  { id:23, imgFile:"/Css/23.jpg", en:{ name:"Senna",                   desc:"Time-tested natural laxative — sennoside-rich leaves and pods for pharmaceutical and traditional medicine.",       tags:["Laxative","Digestive","Pharma"] },
+                              ar:{ name:"السنا",                   desc:"ملين طبيعي مجرب — أوراق وقرون غنية بالسينوسيد للطب الدوائي والتقليدي.",                                    tags:["ملين","هضمي","دواء"] } },
+  { id:24, imgFile:"/Css/24.jpg", en:{ name:"Thyme",                   desc:"Antiseptic herb rich in thymol with antimicrobial, expectorant and preservative properties for diverse applications.",tags:["Antiseptic","Antimicrobial","Expectorant"] },
+                              ar:{ name:"الزعتر",                  desc:"عشب مطهر غني بالثيمول بخصائص مضادة للميكروبات وطارد للبلغم وحافظة للتطبيقات المتنوعة.",                    tags:["مطهر","مضاد ميكروبات","طارد بلغم"] } },
+];
+
+// ── LANGUAGE ──
+let currentLang = localStorage.getItem('bnhLang') || 'en';
+
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'ar' : 'en';
+  localStorage.setItem('bnhLang', currentLang);
+  applyLang(currentLang);
+}
+
+function applyLang(lang) {
+  const isAr = lang === 'ar';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+  document.body.classList.toggle('ar', isAr);
+  document.getElementById('langToggle').textContent = isAr ? 'English' : 'عربي';
+  document.querySelectorAll('[data-en]').forEach(el => { el.textContent = el.dataset[lang]; });
+  
+  if (!CATEGORIES[lang].includes(currentFilter)) {
+    currentFilter = CATEGORIES[lang][0];
+  }
+  
+  buildFilterBar(lang);
+  renderHerbs(lang, currentFilter, document.getElementById('searchInput')?.value || '');
+}
+
+// ── FILTER ──
+const CATEGORIES = {
+  en: ["All", "Antioxidant", "Anti-Inflammatory", "Digestive", "Aromatic", "Cosmetics", "Pharma", "Superfood", "Calming"],
+  ar: ["الكل", "مضاد أكسدة", "مضاد التهاب", "هضمي", "عطري", "تجميل", "دواء", "سوبرفود", "مهدئ"]
+};
+let currentFilter = 'All';
+
+function buildFilterBar(lang) {
+  const bar = document.getElementById('filterBar');
+  const cats = CATEGORIES[lang];
+  bar.innerHTML = cats.map((cat, i) => `
+    <button class="filter-btn ${(currentFilter === cat) ? 'active' : ''}"
+            onclick="setFilter('${cat}', '${lang}', this)">${cat}</button>
+  `).join('') +
+  `<div class="search-wrapper" style="display:flex; gap:8px; width:100%; max-width:400px; margin: 8px auto 0;">
+    <input type="text" id="searchInput" class="search-box" style="flex:1; width:100%;"
+           placeholder="${lang === 'ar' ? 'ابحث عن عشب...' : 'Search herbs...'}"
+           onkeypress="if(event.key === 'Enter') renderHerbs(currentLang, currentFilter, this.value)" />
+    <button class="filter-btn" style="background:var(--gold); color:#fff; border-color:var(--gold); padding: 7px 20px; white-space:nowrap;" 
+            onclick="renderHerbs(currentLang, currentFilter, document.getElementById('searchInput').value)">
+      <i class="fa fa-search"></i> ${lang === 'ar' ? 'بحث' : 'Search'}
+    </button>
+  </div>`;
+}
+
+function setFilter(cat, lang, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderHerbs(lang, cat, document.getElementById('searchInput')?.value || '');
+}
+
+// ── RENDER HERBS ──
+function renderHerbs(lang, filterCat, searchTerm) {
+  const isAr = lang === 'ar';
+  const allCat = isAr ? 'الكل' : 'All';
+  const search = (searchTerm || '').toLowerCase().trim();
+
+  const filtered = HERBS.filter(h => {
+    const d = h[lang];
+    const matchSearch = !search || d.name.toLowerCase().includes(search) || d.tags.some(t => t.toLowerCase().includes(search));
+    const matchFilter = filterCat === allCat || d.tags.includes(filterCat);
+    return matchSearch && matchFilter;
+  });
+
+  const grid = document.getElementById('herbsGrid');
+  const noRes = document.getElementById('noResults');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    noRes.style.display = 'block';
+    document.getElementById('noResultsText').textContent = isAr ? 'لم يتم العثور على أعشاب.' : 'No herbs found.';
+    return;
+  }
+  noRes.style.display = 'none';
+
+  grid.innerHTML = filtered.map((h, idx) => {
+    const d = h[lang];
+    const displayBadge = (filterCat !== allCat) ? filterCat : d.tags[0];
+    const sortedTags = [...d.tags].sort((a, b) => {
+      if (filterCat !== allCat) {
+        if (a === filterCat) return -1;
+        if (b === filterCat) return 1;
+      }
+      return 0;
+    });
+    return `
+    <div class="col-sm-6 col-lg-4 reveal" style="transition-delay:${(idx % 3)*0.1}s">
+      <div class="herb-card">
+        <div class="herb-card-img-wrap">
+          <span class="herb-card-badge">${displayBadge}</span>
+          <img src="${h.imgFile.startsWith('/') ? h.imgFile.substring(1) : h.imgFile}"
+               onerror="this.src='Css/logo.jpeg'"
+               alt="${d.name}" loading="lazy" />
+        </div>
+        <div class="herb-card-body">
+          <h5 class="herb-card-name">${d.name}</h5>
+          <p class="herb-card-desc">${d.desc}</p>
+          <div class="herb-card-tags">${sortedTags.map(t=>`<span class="herb-tag">${t}</span>`).join('')}</div>
+          <button class="btn-readmore" onclick="openQuote('${d.name}')">
+            ${isAr ? 'اطلب عرض سعر' : 'Request a Quote'} <i class="fa fa-arrow-right ms-1"></i>
+          </button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  reObserve();
+}
+
+function openQuote(name) {
+  const msgArea = document.getElementById('waMessage');
+  if(msgArea) {
+    msgArea.value = currentLang === 'ar' ? 
+      `أرغب في الحصول على عرض سعر لعشبة: ${name}\nالكمية المطلوبة: ` : 
+      `I would like to request a quote for: ${name}\nRequired Quantity: `;
+    document.getElementById('order-form').scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// ── ORDER FORM SUBMIT ──
+document.getElementById('waOrderForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('waName').value;
+  const phone = document.getElementById('waPhone').value;
+  const company = document.getElementById('waCompany').value;
+  const msg = document.getElementById('waMessage').value;
+  
+  let text = currentLang === 'ar' ? 
+    `مرحباً بيو نايل هيربس،%0A%0Aالاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالشركة: ${company || 'لا يوجد'}%0A%0Aالطلب/الرسالة:%0A${msg}` :
+    `Hello Bio Nile Herbs,%0A%0AName: ${name}%0APhone: ${phone}%0ACompany: ${company || 'N/A'}%0A%0AOrder/Message:%0A${msg}`;
+    
+  window.open(`https://wa.me/201515874716?text=${text}`, '_blank');
+});
+
+// ── SCROLL ──
+window.addEventListener('scroll', () => {
+  document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
+});
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+
+function reObserve() {
+  document.querySelectorAll('.reveal').forEach(el => {
+    el.classList.remove('visible');
+    revealObserver.observe(el);
+  });
+}
+
+// ── INIT ──
+window.addEventListener('DOMContentLoaded', () => {
+  applyLang(currentLang);
+  reObserve();
+});
+</script>
+</body>
+</html>
