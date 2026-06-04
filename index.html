@@ -638,67 +638,6 @@
       font-family: 'Tajawal', sans-serif;
     }
 
-    /* ── ARTICLE (Section 6) ── */
-    #article {
-      background: var(--cream);
-    }
-
-    .article-card {
-      background: #fff;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-      height: 100%;
-    }
-
-    .article-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-    }
-
-    .article-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .article-body {
-      padding: 24px;
-    }
-
-    .article-category {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .article-body h5 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: var(--text-dark);
-      line-height: 1.4;
-    }
-
-    body.ar .article-body h5 {
-      font-family: 'Tajawal', sans-serif;
-    }
-
-    .article-body p {
-      font-size: 0.9rem;
-      color: var(--text-mid);
-      line-height: 1.7;
-    }
-
-    body.ar .article-body p {
-      font-family: 'Tajawal', sans-serif;
-    }
-
     /* ── HEALTH IMPORTANCE ── */
     #health-importance {
       background: var(--cream);
@@ -808,6 +747,161 @@
     body.ar .health-list-desc {
       font-family: 'Tajawal', sans-serif;
       text-align: right;
+    }
+
+    /* ── CERTIFICATES SECTION (NEW) ── */
+    #certificates { background: var(--white); padding: 90px 0; position: relative; }
+    .cert-card {
+        background: var(--cream);
+        border: 1px solid rgba(26,74,46,0.1);
+        border-radius: 20px;
+        padding: 40px 25px;
+        text-align: center;
+        height: 100%;
+        transition: all 0.4s ease;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Gold line on left for EN, Right for AR */
+    body:not(.ar) .cert-card::before {
+        content:''; position: absolute; top:0; left:0; width: 4px; height: 100%;
+        background: linear-gradient(to bottom, var(--gold), var(--gold-light));
+        border-radius: 4px 0 0 4px;
+    }
+    body.ar .cert-card::before {
+        content:''; position: absolute; top:0; right:0; width: 4px; height: 100%;
+        background: linear-gradient(to bottom, var(--gold), var(--gold-light));
+        border-radius: 0 4px 4px 0;
+    }
+
+    .cert-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(26,74,46,0.15);
+        border-color: var(--gold);
+    }
+    .cert-icon {
+        font-size: 3rem; color: var(--green-dark); margin-bottom: 20px;
+        background: #fff; width: 90px; height: 90px; line-height: 90px; border-radius: 50%;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08); display: inline-block;
+        transition: all 0.3s;
+    }
+    .cert-card:hover .cert-icon {
+        transform: scale(1.1) rotate(5deg);
+        color: var(--gold);
+    }
+    .cert-title {
+        font-family: 'Playfair Display', serif; font-size: 1.4rem;
+        color: var(--text-dark); margin-bottom: 8px; font-weight: 700;
+    }
+    body.ar .cert-title { font-family: 'Tajawal', sans-serif; }
+    .cert-ref {
+        color: var(--text-mid); font-size: 0.9rem; margin-bottom: 20px;
+        display: block; font-style: italic;
+    }
+    body.ar .cert-ref { font-family: 'Tajawal', sans-serif; }
+    .btn-cert {
+        color: var(--green-dark); font-weight: 700;
+        border: 1px solid var(--green-dark); padding: 8px 24px; border-radius: 25px;
+        transition: all 0.3s; display: inline-block; font-size: 0.85rem; letter-spacing: 0.05em;
+        background: transparent; cursor: pointer;
+    }
+    body.ar .btn-cert { letter-spacing: 0; font-family: 'Tajawal', sans-serif; }
+    .btn-cert:hover {
+        background: var(--green-dark); color: #fff;
+        box-shadow: 0 5px 15px rgba(26,74,46,0.3);
+    }
+
+    /* ── MODAL STYLE ── */
+    #certificateModal .modal-content {
+        border-radius: 20px;
+        border: none;
+        overflow: hidden;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    }
+    #certificateModal .modal-header {
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        padding: 15px 25px;
+    }
+    #certificateModal .modal-body {
+        background: #f8f9fa;
+        padding: 30px;
+    }
+    #modalCertImage {
+        max-height: 70vh;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        border: 5px solid #fff;
+    }
+    .modal-title {
+        font-family: 'Playfair Display', serif;
+        color: var(--green-dark);
+        font-weight: 700;
+    }
+    body.ar .modal-title { font-family: 'Tajawal', sans-serif; }
+
+    /* ── ARTICLE (Section 6) ── */
+    #article {
+      background: var(--cream);
+    }
+
+    .article-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+    }
+
+    .article-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    }
+
+    .article-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .article-body {
+      padding: 24px;
+    }
+
+    .article-category {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .article-body h5 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+
+    body.ar .article-body h5 {
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    .article-body p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    body.ar .article-body p {
+      font-family: 'Tajawal', sans-serif;
     }
 
     /* ── LOCATION (Section 7) ── */
@@ -1404,6 +1498,101 @@
     </div>
   </section>
 
+  <!-- ══ SECTION: CERTIFICATES (UPDATED) ══ -->
+  <section id="certificates">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-badge" data-en="Quality Assurance" data-ar="ضمان الجودة">Quality Assurance</span>
+        <h2 class="section-title" data-en="Our Certifications" data-ar="شهاداتنا">Our Certifications</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6 reveal">
+          <div class="cert-card">
+            <i class="fa fa-certificate cert-icon"></i>
+            <h5 class="cert-title" data-en="ISO 9001:2015" data-ar="ISO 9001:2015">ISO 9001:2015</h5>
+            <span class="cert-ref" data-en="Quality Management" data-ar="إدارة الجودة">Quality Management</span>
+            <button type="button" class="btn-cert" data-bs-toggle="modal" data-bs-target="#certificateModal"
+              onclick="openCertificateModal('https://placehold.co/600x800/ffffff/1a4a2e?text=Certificate+1', this)"
+              data-en="View Certificate" data-ar="عرض الشهادة">View Certificate</button>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6 reveal">
+          <div class="cert-card">
+            <i class="fa fa-award cert-icon"></i>
+            <h5 class="cert-title" data-en="Organic USDA" data-ar="عضوي USDA">Organic USDA</h5>
+            <span class="cert-ref" data-en="Organic Production" data-ar="الإنتاج العضوي">Organic Production</span>
+            <button type="button" class="btn-cert" data-bs-toggle="modal" data-bs-target="#certificateModal"
+              onclick="openCertificateModal('https://placehold.co/600x800/ffffff/1a4a2e?text=Certificate+2', this)"
+              data-en="View Certificate" data-ar="عرض الشهادة">View Certificate</button>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6 reveal">
+          <div class="cert-card">
+            <i class="fa fa-leaf cert-icon"></i>
+            <h5 class="cert-title" data-en="EU Organic" data-ar="عضوي أوروبي">EU Organic</h5>
+            <span class="cert-ref" data-en="Eurofins Certified" data-ar="معتمد من Eurofins">Eurofins Certified</span>
+            <button type="button" class="btn-cert" data-bs-toggle="modal" data-bs-target="#certificateModal"
+              onclick="openCertificateModal('https://placehold.co/600x800/ffffff/1a4a2e?text=Certificate+3', this)"
+              data-en="View Certificate" data-ar="عرض الشهادة">View Certificate</button>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-lg-4 col-md-6 reveal">
+          <div class="cert-card">
+            <i class="fa fa-globe cert-icon"></i>
+            <h5 class="cert-title" data-en="GMP Certified" data-ar="معتمد GMP">GMP Certified</h5>
+            <span class="cert-ref" data-en="Good Manufacturing" data-ar="الممارسات التصنيعية الجيدة">Good Manufacturing</span>
+            <button type="button" class="btn-cert" data-bs-toggle="modal" data-bs-target="#certificateModal"
+              onclick="openCertificateModal('https://placehold.co/600x800/ffffff/1a4a2e?text=Certificate+4', this)"
+              data-en="View Certificate" data-ar="عرض الشهادة">View Certificate</button>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-lg-4 col-md-6 reveal">
+          <div class="cert-card">
+            <i class="fa fa-check-circle cert-icon"></i>
+            <h5 class="cert-title" data-en="HACCP Food" data-ar="سلامة الغذاء HACCP">HACCP Food</h5>
+            <span class="cert-ref" data-en="Food Safety System" data-ar="نظام سلامة الغذاء">Food Safety System</span>
+            <button type="button" class="btn-cert" data-bs-toggle="modal" data-bs-target="#certificateModal"
+              onclick="openCertificateModal('https://placehold.co/600x800/ffffff/1a4a2e?text=Certificate+5', this)"
+              data-en="View Certificate" data-ar="عرض الشهادة">View Certificate</button>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-lg-4 col-md-6 reveal">
+          <div class="cert-card">
+            <i class="fa fa-star cert-icon"></i>
+            <h5 class="cert-title" data-en="Fair Trade" data-ar="تجارة عادلة">Fair Trade</h5>
+            <span class="cert-ref" data-ar="التجارة العادلة">Global Standards</span>
+            <button type="button" class="btn-cert" data-bs-toggle="modal" data-bs-target="#certificateModal"
+              onclick="openCertificateModal('https://placehold.co/600x800/ffffff/1a4a2e?text=Certificate+6', this)"
+              data-en="View Certificate" data-ar="عرض الشهادة">View Certificate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CERTIFICATE MODAL ══ -->
+  <div class="modal fade" id="certificateModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCertTitle" data-en="Certificate Details" data-ar="تفاصيل الشهادة">Certificate Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalCertImage" src="" alt="Certificate" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ══ SECTION 6: ARTICLES ══ -->
   <section id="article">
     <div class="container">
@@ -1470,7 +1659,7 @@
         <div class="col-lg-7 reveal">
           <div class="map-container" id="mapContainer">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3477.5678337174168!2d30.6674194755276!3d29.353658675278716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDIxJzEzLjIiTiAzMMKwNDAnMTIuMCJF!5e0!3m2!1sen!2seg!4v1780220465390!5m2!1sen!2seg"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3477.5678337174168!2d30.6674194755276!3d29.353658675278716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDIxJzEzLjIiTiAzMMKwNDAnMTIuMCJF!5e0!3m2!1sen!2seg!4v1780220465390!5m2!1sen!2seg"
               width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
@@ -1774,6 +1963,23 @@
     function buildFooterHerbs(lang) {
       const list = document.getElementById('footerHerbLinks');
       list.innerHTML = FOOTER_HERBS[lang].map(h => `<li><a href="products.html">${h}</a></li>`).join('');
+    }
+
+    // ── CERTIFICATE MODAL LOGIC ──
+    function openCertificateModal(imgSrc, btnElement) {
+        const modalImg = document.getElementById('modalCertImage');
+        const modalTitle = document.getElementById('modalCertTitle');
+        
+        // Set the image source
+        modalImg.src = imgSrc;
+        
+        // Get the card title to use as modal title
+        const cardTitle = btnElement.parentElement.querySelector('.cert-title');
+        if (cardTitle) {
+            modalTitle.textContent = cardTitle.textContent;
+        }
+        
+        // The Bootstrap toggle attribute handles the opening automatically
     }
 
     // ── NAVBAR SCROLL ──
